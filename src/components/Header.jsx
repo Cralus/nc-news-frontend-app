@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom"
 export const Header = () => {
     return (
-        <h1>NC-News</h1>
+       <Link to="/articles"><h1>NC-News</h1></Link> 
     )
 }
