@@ -1,0 +1,12 @@
+.ArticleCard {
+    border: rgb(0, 0, 0) 1px solid;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.topicTag{
+    background-color: grey;
+    color: orange;
+    border: orange 2px solid;
+    border-radius: 10px;
+    padding: 0.25rem;
+}
