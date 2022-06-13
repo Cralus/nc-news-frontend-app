@@ -1,4 +1,5 @@
 import styles from '../styles/ArticleCard.module.css'
+import { Link } from 'react-router-dom'
 export const ArticleCard = ({article}) => {
     return(
         <li className={styles.ArticleCard}>
@@ -9,7 +10,7 @@ export const ArticleCard = ({article}) => {
             <br />
             <p>Upvotes: {article.votes}</p>
             <br />
-            Tag: <button className={styles.topicTag}>{article.topic}</button>
+            Tag: <Link to={`/articles/${article.topic}`}><button className={styles.topicTag}>{article.topic}</button></Link> 
             <br />
             <p>Comments:{article.comment_count}</p>
         </li>

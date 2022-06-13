@@ -6,12 +6,14 @@ import { Header } from './components/Header';
 import { Nav } from './components/Nav';
 
 function App() {
+  
   return (
     <div className="App">
       <Header/>
       <Nav/>
       <Routes>
-        <Route path='/' element={<ArticleList/>}/>
+        <Route path='/articles' element={<ArticleList />}/>
+        <Route path='/articles/:topic' element={<ArticleList />}/>
       </Routes>
     </div>
   );

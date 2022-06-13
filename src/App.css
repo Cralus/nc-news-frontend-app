@@ -13,4 +13,7 @@ ul {
 .App {
   text-align: center;
 }
-
+nav ul li {
+  display: inline;
+  padding: 1rem;
+}
