@@ -1,0 +1,31 @@
+.SingleArticle {
+    padding: 0.5rem;
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 'title title title'
+    'name space votes'
+    'content content content'
+    'comments blank tags';
+    border: black 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.SingleArticle h2 {
+    grid-area: title;
+}
+.SingleArticleBody{
+    text-align: left;
+    grid-area: content;
+}
+.SingleArticle h3{
+    grid-area: name;
+}
+.SingleArticle a {
+    grid-area: tags;
+}
+.votes {
+    grid-area: votes;
+}
+.comments{
+    grid-area: comments;
+}

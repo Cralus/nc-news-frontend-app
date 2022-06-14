@@ -9,7 +9,7 @@ export const ArticleList = () => {
   const [articles, setArticles] = useState([]);
 
   const params = useParams()
-  console.log(params)
+
   useEffect(() => {
     getArticles(params.topic).then((articles) =>{
       setArticles(articles)

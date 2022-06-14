@@ -17,3 +17,11 @@ nav ul li {
   display: inline;
   padding: 1rem;
 }
+
+.topicTag{
+  background-color: grey;
+  color: orange;
+  border: orange 2px solid;
+  border-radius: 10px;
+  padding: 0.25rem;
+}

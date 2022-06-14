@@ -15,3 +15,9 @@ export const getTopics = () => {
         return topics
     })
 }
+export const getSingleArticle = (articleId) => {
+    console.log(articleId, 'in api')
+    return ncNewsApi.get(`/articles/${articleId}`).then(({ data: {article} }) => {
+        return article
+    })
+}
