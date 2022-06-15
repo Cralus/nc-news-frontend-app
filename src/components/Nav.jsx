@@ -8,7 +8,6 @@ export const Nav = () => {
             setTopics(topics)
         })
     }, [])
-    console.log(topics)
     return(
         <nav>
             <h2>Topics</h2>

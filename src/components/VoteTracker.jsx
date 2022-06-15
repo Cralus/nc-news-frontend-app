@@ -10,9 +10,9 @@ export const VoteTracker = ({ votes, articleId }) => {
       return oldVotes + 1;
     });
     patchVotes(articleId, 1).then((article) => {
-      console.log(article);
     }).catch((err) => {
         setCurrentVotes((oldVotes) => {
+            alert('Sorry! unsuccessful upvote')
             return oldVotes - 1;
           });
     });
@@ -22,9 +22,9 @@ export const VoteTracker = ({ votes, articleId }) => {
       return oldVotes + -1;
     });
     patchVotes(articleId, -1).then((article) => {
-      console.log(article);
     }).catch((err) => {
         setCurrentVotes((oldVotes) => {
+            alert('Sorry! unsuccessful downvote')
             return oldVotes + 1;
           });
     });
