@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import styles from '../styles/SingleArticle.module.css'
-import { getSingleArticle } from '../utils/api'
+import { getSingleArticle } from '../utils/api' 
+import { VoteTracker } from './VoteTracker'
 export const SingleArticle = () => {
     const params = useParams()
     const [isLoading, setIsLoading] = useState(true)
@@ -24,7 +25,7 @@ export const SingleArticle = () => {
             <h3>By {currentArticle.author}</h3>
             <p className={styles.SingleArticleBody}>{currentArticle.body}</p> 
             <Link to={`/articles/${currentArticle.topic}`}><button className="topicTag">{currentArticle.topic}</button></Link> 
-            <div className={styles.votes}>Votes: {currentArticle.votes} <button>upvote</button></div>
+             <VoteTracker votes={currentArticle.votes} articleId={currentArticle.article_id}/>
             <p className={styles.comments}>Comments: {currentArticle.comment_count}</p>
        </div>
 
