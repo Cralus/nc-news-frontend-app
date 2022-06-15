@@ -16,8 +16,12 @@ export const getTopics = () => {
     })
 }
 export const getSingleArticle = (articleId) => {
-    console.log(articleId, 'in api')
     return ncNewsApi.get(`/articles/${articleId}`).then(({ data: {article} }) => {
         return article
+    })
+}
+export const patchVotes = (articleId, amountToInc) => {
+    return ncNewsApi.patch(`/articles/${articleId}`, {inc_votes: amountToInc}).then(({ data: {article} }) => {
+        return article;
     })
 }
