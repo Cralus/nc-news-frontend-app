@@ -11,6 +11,10 @@ export const VoteTracker = ({ votes, articleId }) => {
     });
     patchVotes(articleId, 1).then((article) => {
       console.log(article);
+    }).catch((err) => {
+        setCurrentVotes((oldVotes) => {
+            return oldVotes - 1;
+          });
     });
   };
   const handleDownvoteClick = () => {
@@ -19,6 +23,10 @@ export const VoteTracker = ({ votes, articleId }) => {
     });
     patchVotes(articleId, -1).then((article) => {
       console.log(article);
+    }).catch((err) => {
+        setCurrentVotes((oldVotes) => {
+            return oldVotes + 1;
+          });
     });
   };
   return (
