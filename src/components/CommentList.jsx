@@ -10,9 +10,11 @@ getComments(articleId).then((comments) => {
 })
 }, [])
     return (
+        <>
+        <h2>Comments</h2>
         <ul className={styles.CommentList}>
         {comments.map(comment => <CommentCard key={comment.comment_id} comment={comment}/>)}   
          </ul>
-        
+        </>
     )
 }
