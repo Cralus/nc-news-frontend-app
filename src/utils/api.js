@@ -25,3 +25,9 @@ export const patchVotes = (articleId, amountToInc) => {
         return article;
     })
 }
+export const getComments = (articleId) => {
+    return ncNewsApi.get(`/articles/${articleId}/comments`).then(({ data: {comments} }) => {
+        
+        return comments
+    })
+}
