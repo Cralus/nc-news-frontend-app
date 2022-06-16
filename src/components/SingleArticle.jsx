@@ -5,6 +5,7 @@ import styles from "../styles/SingleArticle.module.css";
 import { getSingleArticle } from "../utils/api";
 import { CommentList } from "./CommentList";
 import { VoteTracker } from "./VoteTracker";
+
 export const SingleArticle = () => {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(true);
