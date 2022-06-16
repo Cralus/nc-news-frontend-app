@@ -31,3 +31,9 @@ export const getComments = (articleId) => {
         return comments
     })
 }
+export const postComment = (articleId, {username, body}) => {
+    return ncNewsApi.post(`/articles/${articleId}/comments`, {username, body}).then(({ data: {comment} }) => {
+       
+        return comment
+    })
+}
