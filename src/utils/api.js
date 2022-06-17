@@ -38,3 +38,8 @@ export const postComment = (articleId, {username, body}) => {
         return comment
     })
 }
+export const deleteComment = (commentId) => {
+    return ncNewsApi.delete(`/comments/${commentId}`).then((res) => {
+       return res.status
+    })
+}

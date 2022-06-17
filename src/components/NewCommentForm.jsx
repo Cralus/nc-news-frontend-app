@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { postComment } from "../utils/api"
-
+import { userContext } from "../context/user";
 export const NewCommentForm = ({articleId, setComments}) => {
-    const [newComment, setNewComment] = useState({username: 'jessjelly', body: ''})
+    const { user } = useContext(userContext);
+    const [newComment, setNewComment] = useState({username: user.username, body: ''})
     const handleSubmit =(event) => {
         event.preventDefault()
         setComments((prevComments) => {
@@ -16,7 +17,7 @@ export const NewCommentForm = ({articleId, setComments}) => {
             return currComments
         })
         postComment(articleId, newComment)
-        setNewComment({username: 'jessjelly', body: ''})
+        setNewComment({username: user.username, body: ''})
     }
     
     return (
@@ -31,6 +32,7 @@ export const NewCommentForm = ({articleId, setComments}) => {
                 })
             }} cols="30" rows="10"></textarea>
             <button>Submit</button>
+            
         </form>
         </>
 

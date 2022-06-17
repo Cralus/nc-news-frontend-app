@@ -15,7 +15,7 @@ getComments(articleId).then((comments) => {
         <h2>Comments</h2>
        
         <ul className={styles.CommentList}>
-        {comments.map((comment, index) => <CommentCard key={index} comment={comment}/>)}   
+        {comments.map((comment, index) => <CommentCard key={index} comment={comment} commentId={comment.comment_id} setComments={setComments}/>)}   
          </ul>
         <NewCommentForm articleId={articleId} setComments={setComments}/>
         </>
