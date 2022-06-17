@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Nav/>
+      
       <Routes>
         <Route path='/articles' element={<ArticleList />}/>
         <Route path='/articles/:topic' element={<ArticleList />}/>
